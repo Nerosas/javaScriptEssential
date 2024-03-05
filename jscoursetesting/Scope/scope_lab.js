@@ -29,6 +29,21 @@ function show(){
     }
     show();
     
-    console.log(functionVar); // Throws ReferenceError
-    console.log(functionLet); // Throws ReferenceError
-    console.log(functionConst); // Throws ReferenceError
+ //   console.log(functionVar); // Throws ReferenceError
+ //   console.log(functionLet); // Throws ReferenceError
+ //   console.log(functionConst); // Throws ReferenceError
+
+// Practice task
+{
+    let blockScopedLet = "Practice block-scoped let";
+    var blockScopedVar = "Practice block-scoped var";
+    const blockScopedConst = "Practice block-scoped const";
+
+    blockScopedLet = "changed blockScopedLet inside block";
+    blockScopedVar = "changed blockScopedVar inside block";
+ //   blockScopedConst = "changed blockScopedConst inside block"; // Throws TypeError
+}
+
+blockScopedLet = "changed blockScopedLet outside block";
+blockScopedVar = "changed blockScopedVar outside block";
+blockScopedConst = "changed blockScopedConst outside block";
